@@ -1,0 +1,20 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: demo-cloud-erueka-server # 应用名称，也可作为服务名称
+
+# eureka客户端配置（和Server交互） Eureka Server也是一个Client
+eureka:
+  instance:
+    hostname: eureka8761 # 当前eureka主机名
+    prefer-ip-address: false
+  client:
+    service-url: #配置客户端交互的Eureka Server的地址
+      # 集群模式下，defaultZone应该指向其它的Eureka Server,如果有更多eureka实例， , 拼接即可
+      defaultZone: http://eureka8762:8762/eureka/
+    # register-with-eureka 是否在eureka上注册自己的信息以供其它服务发现，默认true
+    # 有时候有些服务如果不想被其他eureka发现，但是又想发现其它的服务，设置为false
+    register-with-eureka: true
+    # 查询获取注册中心的服务信息，自己就是server,集群模式下为true 默认为true
+    fetch-registry: true

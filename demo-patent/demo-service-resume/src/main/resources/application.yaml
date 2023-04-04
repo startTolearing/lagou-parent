@@ -1,0 +1,28 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bank?serverTimezone=UTC
+    username: root
+    password: wyf993wyf
+  application:
+    name: demo-service-resume
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+# 注册到eureka服务注册中心
+eureka:
+  client:
+    service-url:
+      # 注册到集群，就把多个eureka地址使用逗号连接即可，
+      defaultZone: http://eureka8762:8762/eureka,http://eureka8761:8761/eureka
+  instance:
+    # 以IP形式展示 192.168.45.1而不是 LAPTOP-8QVSRNO9--主机名
+    prefer-ip-address: true
+    # 原来样式：IP:服务名称:端口号，例如：192.168.45.1:demo-service-resume:8080，我们可以自定义
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
