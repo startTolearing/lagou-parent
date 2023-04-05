@@ -20,6 +20,8 @@
         <module>demo-service-resume8083</module>
         <module>demo-cloud-erueka-server-8761</module>
         <module>demo-cloud-erueka-server-8762</module>
+        <module>demo-service-dashboard9000</module>
+        <module>demo-service-turbine9001</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

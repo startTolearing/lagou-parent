@@ -1,0 +1,15 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: demo-service-dashboard
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka8762:8762/eureka,http://eureka8761:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "localhost"

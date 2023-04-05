@@ -109,6 +109,16 @@ public class AutoDeliverController {
 
       commandProperties = {
           @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "2000")
+
+          // Hystrix高级配置
+          ,@HystrixProperty(name =
+          "metrics.rollingStats.timeInMilliseconds",value = "8000"),
+          @HystrixProperty(name =
+              "circuitBreaker.requestVolumeThreshold",value = "2"),
+          @HystrixProperty(name =
+              "circuitBreaker.errorThresholdPercentage",value = "50"),
+          @HystrixProperty(name =
+              "circuitBreaker.sleepWindowInMilliseconds",value = "3000")
       },
       fallbackMethod = "myFallback"     // 服务降级返回的调用默认的方法
   )
