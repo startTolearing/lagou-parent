@@ -20,7 +20,7 @@ public class ResumeController {
 //    return resumeService.findDefaultResumeByUserId(userId).getIsOpenResume();
     // 模拟处理超时
     try {
-      Thread.sleep(10000);
+      Thread.sleep(5000);
     } catch (InterruptedException e) {
       throw new RuntimeException(e);
     }

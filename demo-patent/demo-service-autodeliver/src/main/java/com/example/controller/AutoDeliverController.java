@@ -64,7 +64,6 @@ public class AutoDeliverController {
   @GetMapping("/checkState/{userId}")
   public Integer findResumeOpenState(@PathVariable Long userId) {
     String url = "http://demo-service-resume/resume/openstate/" + userId;
-
     Integer status = restTemplate.
         getForObject(url, Integer.class);
     System.out.println("======>>>调⽤简历微服务，获取到⽤户" + userId + "的默认简历当前状态为：" + status);

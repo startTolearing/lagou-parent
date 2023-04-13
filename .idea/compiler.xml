@@ -14,6 +14,7 @@
         <module name="demo-service-resume" />
         <module name="demo-service-common" />
         <module name="demo-service-turbine9001" />
+        <module name="demo-service-autodeliver8096" />
         <module name="demo-service-dashboard9000" />
       </profile>
     </annotationProcessing>
@@ -30,6 +31,7 @@
       <module name="demo-service-autodeliver" options="-parameters" />
       <module name="demo-service-autodeliver (1)" options="-parameters" />
       <module name="demo-service-autodeliver (2)" options="-parameters" />
+      <module name="demo-service-autodeliver8096" options="-parameters" />
       <module name="demo-service-common" options="-parameters" />
       <module name="demo-service-dashboard9000" options="-parameters" />
       <module name="demo-service-resume" options="-parameters" />
