@@ -8,14 +8,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="demo-cloud-erueka-server-8762" />
-        <module name="demo-service-resume8083" />
         <module name="demo-service-autodeliver" />
+        <module name="demo-service-resume8083" />
         <module name="demo-cloud-erueka-server-8761" />
         <module name="demo-service-resume" />
         <module name="demo-service-common" />
         <module name="demo-service-turbine9001" />
         <module name="demo-service-autodeliver8096" />
         <module name="demo-service-dashboard9000" />
+        <module name="demo-cloud-gateway9002" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +28,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo-cloud-erueka-server-8761" options="-parameters" />
       <module name="demo-cloud-erueka-server-8762" options="-parameters" />
+      <module name="demo-cloud-gateway9002" options="-parameters" />
       <module name="demo-patent" options="" />
       <module name="demo-service-autodeliver" options="-parameters" />
       <module name="demo-service-autodeliver (1)" options="-parameters" />

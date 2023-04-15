@@ -6,6 +6,7 @@
       <list>
         <option value="$PROJECT_DIR$/demo-parent/pom.xml" />
         <option value="$PROJECT_DIR$/demo-patent/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-patent/demo-cloud-gateway9002/pom.xml" />
       </list>
     </option>
   </component>

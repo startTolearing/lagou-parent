@@ -63,6 +63,7 @@ public class AutoDeliverController {
    */
   @GetMapping("/checkState/{userId}")
   public Integer findResumeOpenState(@PathVariable Long userId) {
+    // http://localhost:8080/resume/openstate/2195320
     String url = "http://demo-service-resume/resume/openstate/" + userId;
     Integer status = restTemplate.
         getForObject(url, Integer.class);
